@@ -3,14 +3,11 @@ import javax.swing.JOptionPane;
 public class TestMyEmolument {
 
     public static void main(String[] args) {
-        // Input dialog to accept basic salary and tax relief
         double basicSalary = Double.parseDouble(JOptionPane.showInputDialog("Enter Basic Salary:"));
         double taxRelief = Double.parseDouble(JOptionPane.showInputDialog("Enter Tax Relief:"));
 
-        // Create MyEmolument object
         MyEmolument staffSalary = new MyEmolument(basicSalary, taxRelief);
 
-        // Display results
         String result = String.format(
                 "Basic Salary: %.2f\nTax Relief: %.2f\nSSNIT Contribution: %.2f\nTaxable Income: %.2f\nIncome Tax: %.2f\nTotal Deduction: %.2f\nNet Salary: %.2f",
                 staffSalary.getBasicSalary(),
